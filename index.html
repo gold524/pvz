@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 260px; left: 470px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 390px; left: 470px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 520px; left: 470px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left: 470px;">
+		<img class="shooter" src="peashooter.png"  style="top: 780px; left: 470px;">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies zombie" src="zombie1.png" style="top: 210px; left: 1170px">
+		<img class="zombies zombie" src="zombie2.png" style="top: 340px; left: 1170px">
+		<img class="zombies zombie" src="zombie2.png" style="top: 470px; left: 1170px">
+		<img class="zombies zombie" src="zombie4.png" style="top: 600px; left: 1170px">
+		<img class="zombies zombie" src="zombie4.png" style="top: 730px; left: 1170px">
+	</div>
+<script>
+
+let zombies = document.querySelectorAll(".zombies");
+let zombie = document.querySelectorAll(".zombie");
+	
+	for (let i=0;i<5;i=i+1){
+		zombie[i].onclick = function(){
+			let step = 1170;
+			step = step - 100;
+			zombie[i].style.left = step + "px";
+			console.log(step)
+
+			if(step == 470){
+				alert('укусил');
+			}
+		}
+
+		zombie[i].onclick = function(){
+			let step = 1170;
+			step = step - 100;
+			zombie[i].style.left = step + "px";
+			console.log(step)
+
+			if(step == 470){
+				alert('сожрал');
+			}
+		}
+		zombie[i].onclick = function(){
+			let step = 1170;
+			step = step - 100;
+			zombie[i].style.left = step + "px";
+			console.log(step)
+
+			if(step == 470){
+				alert('подавился');
+			}
+		}
+		zombie[i].onclick = function(){
+			let step = 1170;
+			step = step - 100;
+			zombie[i].style.left = step + "px";
+			console.log(step)
+
+			if(step == 470){
+				alert('кринжанул');
+			}
+		}
+	}
+	
+
+
+</script>
+</body>
+</html>
